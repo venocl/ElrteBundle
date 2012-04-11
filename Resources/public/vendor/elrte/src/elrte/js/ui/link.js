@@ -42,7 +42,7 @@ elRTE.prototype.ui.prototype.buttons.link = function(rte, name) {
 			},
 
 			popup : {
-				use        : $('<input type="checkbox" name="use" />'),
+				use        : $('<input type="checkbox" />'),
 				url        : $('<input type="text" />'    ).val('http://'),
 				name       : $('<input type="text" />'    ),
 				width      : $('<input type="text" />'    ).attr({size : 6, title : self.rte.i18n('Width')} ).css('text-align', 'right'),

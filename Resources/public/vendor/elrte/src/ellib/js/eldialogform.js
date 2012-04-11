@@ -270,7 +270,7 @@ function elDialogForm(o) {
 						self.form.submit();
 					}
 				})
-				.first().focus()
+				.filter(':first')[0].focus()
 		}, 200);
 
 		this.dialog.dialog('open');

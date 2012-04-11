@@ -259,10 +259,9 @@ elRTE.prototype.selection = function(rte) {
 		if (this.rte.browser.msie) {
 			this.getRangeAt().range().pasteHTML(html);
 		} else {
-			var nodes = $(this.rte.dom.create('span')).html(html||'').get(0).childNodes;
-			while (nodes.length) {
-			    this.insertNode(nodes[0]);
-			}
+			var n = $(this.rte.dom.create('span')).html(html||'').get(0);
+			this.insertNode(n);
+			$(n).replaceWith($(n).html());
 		}
 		return this.cleanCache();
 	}

@@ -387,9 +387,9 @@ elRTE.prototype.val = function(v) {
 		}
 	} else {
 		if (this.source.is(':visible')) {
-			return $.trim(this.filter.source2source(this.source.val()));
+			return this.filter.source2source(this.source.val()).trim();
 		} else {
-			return $.trim(this.filter.source($(this.doc.body).html()));
+			return this.filter.source($(this.doc.body).html()).trim();
 		}
 	}
 }
@@ -445,7 +445,7 @@ $.fn.elrte = function(o, v) {
 		if (!this.length) {
 			return '';
 		} else if (this.length == 1) {
-			return v || v === '' ? this[0].elrte.val(v) : this[0].elrte.val();
+			return v ? this[0].elrte.val(v) : this[0].elrte.val();
 		} else {
 			ret = {}
 			this.each(function() {
