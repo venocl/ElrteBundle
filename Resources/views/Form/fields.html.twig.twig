@@ -1,0 +1,18 @@
+{% block venocl_elrte_widget %}
+    {% spaceless %}
+        <script type="text/javascript" charset="utf-8">
+            $().ready(function() {
+                var opts = {
+                lang         : 'ru',   // set your language
+                styleWithCSS : false,
+                height       : 400,
+                toolbar      : 'maxi'
+            };
+
+            $('#our-element').elrte(opts);
+
+            });
+        </script>
+        {{ block('textarea_widget') }}
+    {% endspaceless %}
+{% endblock %}
