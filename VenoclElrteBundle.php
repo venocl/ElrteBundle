@@ -1,14 +1,14 @@
 <?php
 
-namespace Venocl\VElrteBundle;
+namespace Venocl\ElrteBundle;
 
 use Symfony\Component\HttpKernel\Bundle\Bundle;
 
 /**
- * VElrteBundle
+ * VenoclElrteBundle
  *
  * @author Louis Oberlé <louisoberle@yahoo.fr>
  */
-class VElrteBundle extends Bundle
+class VenoclElrteBundle extends Bundle
 {
 }

@@ -12,7 +12,7 @@ use Symfony\Component\Config\FileLocator;
  *
  * @author Louis Oberlé <louisoberle@yahoo.fr>
  */
-class VElrteExtension extends Extension
+class VenoclElrteExtension extends Extension
 {
     public function load(array $configs, ContainerBuilder $container)
     {
