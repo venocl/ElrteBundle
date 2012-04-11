@@ -1,19 +1,17 @@
 {% block venocl_elrte_widget %}
-    {% spaceless %}
-        <script type="text/javascript" charset="utf-8">
-            $().ready(function() {
-                var opts = {
-                lang         : 'ru',   // set your language
-                styleWithCSS : false,
-                height       : 400,
-                toolbar      : 'maxi'
-            };
+    <script type="text/javascript" charset="utf-8">
+        $().ready(function() {
+            var opts = {
+            lang         : 'ru',   // set your language
+            styleWithCSS : false,
+            height       : 400,
+            toolbar      : 'maxi'
+        };
 
-            $('#our-element').elrte(opts);
+        $('#{{ id }}').elrte(opts);
 
-            });
-        </script>
-        <h1>reconnaissable</h1>
-        {{ block('textarea_widget') }}
-    {% endspaceless %}
+        });
+    </script>
+    <h1>reconnaissable: {{ id }}</h1>
+    {{ block('textarea_widget') }}
 {% endblock %}
