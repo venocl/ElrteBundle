@@ -1,10 +1,13 @@
 
-service:
-  venocl.elrte:
-    class: Venocl\ElrteBundle\Form\Type\ElrteType
-    arguments:
+services:
+  venocl.form.type.elrte:
+      class: Venocl\ElrteBundle\Form\Type\ElrteType
+      arguments:
       options:
         lang         : fr
         styleWithCSS : false
         height       : 400
         toolbar      : maxi
+      tags:
+          - { name: form.type, alias: venocl_elrte }
+

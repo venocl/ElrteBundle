@@ -3,6 +3,9 @@
 namespace Venocl\ElrteBundle;
 
 use Symfony\Component\HttpKernel\Bundle\Bundle;
+use Symfony\Component\DependencyInjection\ContainerBuilder;
+
+use Venocl\ElrteBundle\DependencyInjection\Compiler\ElrtePass;
 
 /**
  * VenoclElrteBundle
@@ -11,4 +14,10 @@ use Symfony\Component\HttpKernel\Bundle\Bundle;
  */
 class VenoclElrteBundle extends Bundle
 {
+    public function build(ContainerBuilder $container)
+    {
+        parent::build($container);
+        
+        $container->addCompilerPass(new ElrtePass());
+    }
 }
