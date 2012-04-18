@@ -1,17 +1,9 @@
 {% block venocl_elrte_widget %}
     <script type="text/javascript" charset="utf-8">
         $().ready(function() {
-            var opts = {
-            lang         : 'ru',   // set your language
-            styleWithCSS : false,
-            height       : 400,
-            toolbar      : 'maxi'
-        };
-
-        $('#{{ id }}').elrte(opts);
-
+            var opts = {{ options|json_encode|raw }};
+            $('#{{ id }}').elrte(opts);
         });
     </script>
-    <h1>reconnaissable: {{ id }}</h1>
     {{ block('textarea_widget') }}
 {% endblock %}

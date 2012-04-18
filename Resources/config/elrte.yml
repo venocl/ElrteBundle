@@ -3,11 +3,8 @@ services:
   venocl.form.type.elrte:
       class: Venocl\ElrteBundle\Form\Type\ElrteType
       arguments:
-      options:
-        lang         : fr
-        styleWithCSS : false
-        height       : 400
-        toolbar      : maxi
+        options:
+          toolbar: normal
       tags:
           - { name: form.type, alias: venocl_elrte }
 
