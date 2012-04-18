@@ -17,9 +17,8 @@ class VenoclElrteExtension extends Extension
     public function load(array $configs, ContainerBuilder $container)
     {
         $loader = new YamlFileLoader($container, new FileLocator(__DIR__.'/../Resources/config'));
-        
-        //$configs = $this->processConfiguration(new Configuration(), $configs);
-        
         $loader->load('elrte.yml');
+        
+        $container->setParameter('venocl_elrte.elrte.config', $configs[0]['elrte']);
     }
 }

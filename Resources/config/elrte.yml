@@ -1,10 +1,11 @@
+parameters:
+  venocl_elrte.elrte.config: ~
 
 services:
   venocl.form.type.elrte:
       class: Venocl\ElrteBundle\Form\Type\ElrteType
       arguments:
-        options:
-          toolbar: normal
+        options: %venocl_elrte.elrte.config%
       tags:
           - { name: form.type, alias: venocl_elrte }
 

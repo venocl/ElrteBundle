@@ -2,6 +2,12 @@
     <script type="text/javascript" charset="utf-8">
         $().ready(function() {
             var opts = {{ options|json_encode|raw }};
+            {% if options['toolbar'][0] is defined %}
+                elRTE.prototype.options.panels.customPanel = {{ options['toolbar']|json_encode|raw }};
+                elRTE.prototype.options.toolbars.customToolbar = ['customPanel'];
+
+                opts['toolbar'] = 'customToolbar';
+            {% endif %}
             $('#{{ id }}').elrte(opts);
         });
     </script>
